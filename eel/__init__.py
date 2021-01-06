@@ -380,7 +380,7 @@ def _websocket_close(page):
         if _shutdown:
             _shutdown.kill()
 
-        _shutdown = gvt.spawn_later(1.0, _detect_shutdown)
+        _shutdown = gvt.spawn_later(15.0, _detect_shutdown)
 
 
 def _set_response_headers(response):
